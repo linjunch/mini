@@ -1,13 +1,45 @@
 {
-  "pages":[
+  "pages": [
+    "pages/databind/databind",
+    "pages/display/display",
+    "pages/tag/tag",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/find/find",
+    "pages/mine/mine"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "navigationBarBackgroundColor": "#0094ff",
+    "navigationBarTitleText": "Mina",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#ccc"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icon/index.png",
+        "selectedIconPath": "icon/index_active.png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "icon/find.png",
+        "selectedIconPath": "icon/find_active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "icon/mine.png",
+        "selectedIconPath": "icon/mine_active.png"
+      }
+    ],
+    "color": "#7a7a7a",
+    "selectedColor": "#333",
+    "borderStyle": "black",
+    "backgroundColor": "#eee"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

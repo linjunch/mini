@@ -1,0 +1,14 @@
+<view> 条件渲染 </view>
+<!-- if和else必须放在一起使用 -->
+<view wx:if="{{ !isShow }}"> this is wx:if </view>
+
+<view wx:else> this is wx:else </view>
+
+<!-- 不用+wx  直接hidden -->
+<view hidden="{{ !isHidden }}"> this is wx:hiddent </view>
+<view hidden> this is wx:hiddent </view>
+
+<!-- if是虚拟dom书=树结构发生变化，hidden只是dispaly为none -->
+<!-- 如果只是页面开局判断是否渲染 且不会更改或者较少更改  优先用if -->
+<!-- 如果频繁切换，用hidden -->
+<!-- hidden属性不要和样式的display一起使用 会使hidden失效 -->

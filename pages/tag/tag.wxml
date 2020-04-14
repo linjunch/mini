@@ -1,0 +1,65 @@
+<!-- 
+    1 text 相当于span 行内标签
+    2 view 相当于div 块级标签
+    3 block 相当于template 占位符 实际不渲染
+    4 div+span 被当作自定义标签 没有样式  
+ -->
+
+<div>this is div</div>
+
+<unknow>this is unknow</unknow>
+
+<span>this is span</span>
+
+<view>this is view</view>
+
+<text>this is text</text>
+
+<block>this is block</block>
+
+<!-- 数值、布尔值、对象和字符串值都有toString()方法，但是null和undefined值没有这个方法 -->
+<!-- data中的数据会经过String(xx)处理 -->
+<!-- obj会被转换成[object,Object], arr会被逐个转换成字符串,内层会递归平展,内层是数组还是会转换成字符串,对象始终转换成[object,Object]-->
+
+<!-- string  -->
+<view>{{ msg }}</view>
+
+<!-- number  -->
+<view>{{ num }}</view>
+
+<!-- Boolean  -->
+<view>{{ flag }}</view>
+
+<!-- null  -->
+<view>{{ nul }}</view>
+
+<!-- undefined 不渲染 -->
+<view>{{ udf }}</view>
+
+<!-- arr  -->
+<view>{{ arr }}</view>
+
+<!-- obj  -->
+<view>{{ obj }}</view>
+
+<!-- 自定义属性  通过data-xx="{{}}" -->
+<!-- 通过   e.target.dataset.info 或者 e.currentTarget.dataset.info 调用-->
+<view data-info="{{ '这是自定义属性，可以用参数' }}" bindtap="showinfo">123</view>
+
+<!-- checkbox的使用 -->
+<view>
+    <checkbox checked="{{flag}}" bindtap='toggle'/>
+</view>
+
+<!-- 遍历循环 wx:for="{{list}}"" 默认自带参数item和index 可以不写 -->
+<!-- token会去item里面找  --> 
+<!-- 当纯数数字字符的不重复数组时，可以用*this -->
+<view wx:for="{{list}}" wx:key='token' wx:for-item='item' wx:for-index='index'>{{index+1+ "---" +item.name}}</view>
+<view>=== 上面跟下面效果一样 =====</view>
+<view wx:for="{{list}}" wx:key='*this' >{{index+1+ "---" +item.name}}</view>
+
+<!-- 对象的遍历 -->
+<view wx:for="{{obj}}"  wx:for-item='value' wx:for-index='key' wx:key='value'>
+    {{key+':'+value}}
+</view>
+  
