@@ -1,5 +1,11 @@
 {
   "pages": [
+    "pages/richtext/richtext",
+    "pages/nav/nav",
+    "pages/swiper/swiper",
+    "pages/image/image",
+    "pages/view_text/view_text",
+    "pages/nmsl/nmsl",
     "pages/databind/databind",
     "pages/display/display",
     "pages/tag/tag",

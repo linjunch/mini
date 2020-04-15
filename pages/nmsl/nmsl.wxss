@@ -1,0 +1,19 @@
+.title {
+  font-size: 60rpx;
+  font-weight: 600;
+}
+.keyTile {
+  font-weight: 600;
+}
+input {
+  border: 1px solid #ccc;
+  margin: 4rpx;
+  padding: 10rpx;
+}
+textarea {
+  margin: 4rpx;
+  padding: 10rpx;
+  border: 2rpx solid #ccc;
+  width: 718rpx;
+  height: 500rpx;
+}

@@ -1,0 +1,11 @@
+.active {
+  color: aqua;
+}
+.box {
+  display: block;
+  width: 400rpx;
+  height: 400rpx;
+  line-height: 400rpx;
+  text-align: center;
+  background-color: #ccc;
+}

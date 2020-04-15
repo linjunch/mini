@@ -1,0 +1,35 @@
+<!-- 
+    view:
+    1 hover-class 按下去的样式 hover-class="none"，没有点击态效果
+    2 hover-stop-propagation阻止冒泡
+ -->
+<view class="box" hover-class="active" hover-stop-propagation>123</view>
+
+<!-- 
+    text：
+    1 文本标签
+    2 只能嵌套text
+    3 长按复制（只有改标签有这个功能）
+    4 可以对回车 空格 进行编码
+
+    属性：
+    1 selectable 文本是否可选
+    2 decode 是否解码
+    3 space 显示连续空格
+ 
+    bug & tip
+    tip: decode可以解析的有 &nbsp; &lt; &gt; &amp; &apos; &ensp; &emsp;
+    tip: 各个操作系统的空格标准并不一致。
+    tip:text 组件内只支持 text 嵌套。
+    tip: 除了文本节点以外的其他节点都无法长按选中。
+    bug: 基础库版本低于 2.1.0 时， text 组件内嵌的 text style 设置可能不会生效。
+ -->
+
+<text selectable space="false" decode>
+  this&nbsp;is text 
+  &nbsp;
+  123
+</text>
+<text selectable space="false" decode>
+  123
+</text>

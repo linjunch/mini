@@ -1,0 +1,15 @@
+<view class="title">营销号生成器</view>
+<view>
+    <view class="keyTile">主体：</view>
+    <input type="text" bindinput="changeValue" data-key="who"/>
+</view>
+<view>
+    <view class="keyTile">事件：</view>
+    <input type="text" bindinput="changeValue" data-key="doing"/>
+</view>
+<view>
+    <view class="keyTile">另一种说法：</view>
+    <input type="text" bindinput="changeValue" data-key="other" />
+</view>
+<button bindtap="getRes">生成</button>
+<textarea cols="50" rows="20" maxlength="999" value="{{res}}" />

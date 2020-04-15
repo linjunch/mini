@@ -1,0 +1,23 @@
+<!-- 
+    1 target                    在哪个目标上发生跳转，默认当前小程序 self/miniProgram
+    2 url                       当前小程序内的跳转链接
+    3 open-type                 跳转方式 默认 navigate/redirect/switchTab/reLaunch/navigateBack/exit
+        1 navigate  相当于push  保留当前页面 可以后退 不允许跳到tabbar上
+        2 redirect 重定向 不保留当前页面 不可以后退 不允许跳到tabbar上
+        3 switchTab 跳转到tabBar页面 并关闭其他非tabBar页面
+        4 reLaunch 关闭所有页面 打开到应用内的某个页面
+        5 navigateBack 相当于back,后退到上次的页面 
+
+    4 hover-class	            指定点击时的样式类，当hover-class="none"时，没有点击态效果
+    5 hover-stop-propagation    指定是否阻止本节点的祖先节点出现点击态
+
+
+    tip
+    1 默认块 级元素
+ -->
+<view>
+  <navigator url="/pages/nmsl/nmsl" open-type="navigate">营销号生成器</navigator>
+  <navigator url="/pages/image/image" open-type="navigate">img</navigator>
+  <navigator url="/pages/swiper/swiper" open-type="navigate">swiper</navigator>
+  <navigator url="/pages/view_text/view_text" open-type="navigate">view&text</navigator>
+</view>

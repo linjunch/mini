@@ -1,0 +1,13 @@
+view {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20rpx;
+}
+navigator {
+  border: 2rpx solid #ccc;
+  padding: 10rpx;
+  text-align: center;
+}
+navigator:first {
+  margin-top: 20rpx;
+}

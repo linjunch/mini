@@ -1,6 +1,11 @@
 <!-- 双向绑定 + this.setData() -->
 
-<!-- 方法只能写在双引号里，不能用双括号，也不能带参数，只能通过data-xx传递参数，通过e.target/currentTarget.dataset.xx获取 -->
-<input type="text" bindinput="changeValue" data-info="123" />
+<!-- 方法只能写在双引号里，不能用双括号，也不能带参数，只能通过自定义属性data-xx传递参数，通过e.target/currentTarget.dataset.xx获取 -->
+<input
+  type="text"
+  value="{{ value }}"
+  bindinput="changeValue"
+  data-info="123"
+/>
 
 <view>value:{{ value }}</view>
